@@ -303,7 +303,7 @@ with st.sidebar:
     page = st.radio(
         "Раздел",
         [
-            "🏆 LeaderBord",
+            "🏆 LeaderBoard",
             "⚙️ Администрирование"
         ]
     )
@@ -313,7 +313,7 @@ with st.sidebar:
 # LEADERBOARD
 # =====================================================
 
-if page == "🏆 LeaderBord":
+if page == "🏆 LeaderBoard":
 
     employees = load_data()
 
@@ -388,35 +388,26 @@ if page == "🏆 LeaderBord":
             cup = '<div class="cup bronze">♛</div>'
 
 
-        row_html = f"""
+       row_html = f"""
 <div class="{row_class}">
     <div class="rank-area">
         {cup}
-        <div class="rank">
-            {place:02d}
-        </div>
+        <div class="rank">{place:02d}</div>
     </div>
 
     <div>
-        <div class="name">
-            {employee["name"]}
-        </div>
-
+        <div class="name">{employee["name"]}</div>
         <div class="bar">
-            <div
-                class="bar-inner"
-                style="width:{width}%">
-            </div>
+            <div class="bar-inner" style="width:{width}%"></div>
         </div>
     </div>
 
-    <div class="score">
-        {rating:.1f}
-    </div>
+    <div class="score">{rating:.1f}</div>
 </div>
 """
 
-        st.markdown(row_html, unsafe_allow_html=True)
+st.markdown(row_html, unsafe_allow_html=True)
+
 
 
     st.markdown(
