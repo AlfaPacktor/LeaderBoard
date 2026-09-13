@@ -27,6 +27,10 @@ st.markdown("""
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap');
 
+/* =====================================================
+   ОСНОВНЫЕ НАСТРОЙКИ
+   ===================================================== */
+
 html, body, [class*="css"] {
     font-family: 'Montserrat', Arial, sans-serif;
     color: #111111;
@@ -34,22 +38,7 @@ html, body, [class*="css"] {
 
 .stApp {
     background-color: #e9e9e9;
-    color: #111111;
 }
-
-.stMarkdown,
-.stMarkdown p,
-.stMarkdown div,
-.stMarkdown span {
-    color: #111111;
-}
-
-.block-container {
-    max-width: 900px;
-    padding-top: 45px;
-    padding-bottom: 50px;
-}
-
 
 /* Убираем стандартное меню */
 
@@ -65,13 +54,23 @@ header {
     visibility: hidden;
 }
 
+/* Основной контейнер */
 
-/* Заголовок */
+.block-container {
+    max-width: 900px;
+    padding-top: 45px;
+    padding-bottom: 40px;
+}
+
+
+/* =====================================================
+   ЗАГОЛОВОК
+   ===================================================== */
 
 .eyebrow {
     font-size: 10px;
     letter-spacing: 3px;
-    color: #777;
+    color: #777777;
     margin-bottom: 12px;
 }
 
@@ -90,10 +89,13 @@ header {
     letter-spacing: -5px;
     line-height: 0.9;
     margin-bottom: 15px;
+    color: #111111;
 }
 
+/* Только Board красный */
+
 .title-red {
-    color: #d71920;
+    color: #d71920 !important;
 }
 
 .red-line {
@@ -106,24 +108,27 @@ header {
 .subtitle {
     font-size: 12px;
     letter-spacing: 2px;
-    color: #777;
+    color: #777777;
     text-transform: uppercase;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
 }
 
 
-/* Строка */
+/* =====================================================
+   СТРОКА УЧАСТНИКА
+   ===================================================== */
 
 .row {
     display: grid;
-    grid-template-columns: 85px 1fr 100px;
+    grid-template-columns: 75px 1fr 90px;
+
     align-items: center;
 
-    min-height: 76px;
+    min-height: 60px;
 
-    margin-bottom: 7px;
+    margin-bottom: 4px;
 
-    padding: 8px 20px 8px 8px;
+    padding: 6px 16px 6px 6px;
 
     background: #f7f7f7;
 
@@ -135,43 +140,56 @@ header {
 }
 
 .row:hover {
-    background: white;
-    transform: translateX(4px);
+    background: #ffffff;
+    transform: translateX(3px);
 }
+
+
+/* Первое место */
 
 .row-first {
     border-left-color: #c49a00;
 }
 
+/* Второе место */
+
 .row-second {
     border-left-color: #888888;
 }
+
+/* Третье место */
 
 .row-third {
     border-left-color: #925528;
 }
 
 
-/* Место */
+/* =====================================================
+   МЕСТО
+   ===================================================== */
 
 .rank-area {
     position: relative;
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 }
 
 .rank {
-    font-size: 20px;
-    color: #777;
+    font-size: 18px;
+    color: #777777;
 }
 
 .cup {
     position: absolute;
-    left: 3px;
+
+    left: 1px;
     top: 0;
 
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .gold {
@@ -187,44 +205,65 @@ header {
 }
 
 
-/* Имя */
+/* =====================================================
+   ИМЯ УЧАСТНИКА
+   ===================================================== */
 
 .name {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
+    color: #111111;
 }
+
+
+/* =====================================================
+   ПОЛОСА РЕЙТИНГА
+   ===================================================== */
 
 .bar {
     height: 3px;
+
     width: 90%;
+
     background: #d5d5d5;
-    margin-top: 9px;
+
+    margin-top: 6px;
 }
 
 .bar-inner {
     height: 3px;
+
     background: #d71920;
 }
 
 
-/* Рейтинг */
+/* =====================================================
+   РЕЙТИНГ
+   ===================================================== */
 
 .score {
     text-align: right;
-    font-size: 29px;
+
+    font-size: 26px;
+
     font-weight: 800;
+
+    color: #111111;
 }
 
 
-/* Footer */
+/* =====================================================
+   FOOTER
+   ===================================================== */
 
 .footer {
     display: flex;
+
     justify-content: space-between;
 
-    margin-top: 20px;
+    margin-top: 15px;
 
-    color: #777;
+    color: #777777;
 
     font-size: 9px;
 
@@ -234,42 +273,62 @@ header {
 }
 
 
-/* Mobile */
+/* =====================================================
+   МОБИЛЬНАЯ ВЕРСИЯ
+   ===================================================== */
 
 @media (max-width: 600px) {
 
+    .block-container {
+        padding-top: 25px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-bottom: 25px;
+    }
+
     .title {
-        font-size: 50px;
+        font-size: 48px;
+        letter-spacing: -3px;
+    }
+
+    .subtitle {
+        margin-bottom: 18px;
     }
 
     .row {
-        grid-template-columns: 60px 1fr 75px;
-        min-height: 67px;
-        padding-right: 12px;
+        grid-template-columns: 48px 1fr 65px;
+
+        min-height: 52px;
+
+        margin-bottom: 3px;
+
+        padding: 5px 10px 5px 4px;
     }
 
     .name {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .score {
-        font-size: 21px;
+        font-size: 19px;
     }
 
     .rank {
-        font-size: 16px;
-    }
-
-    .cup {
         font-size: 15px;
     }
 
+    .cup {
+        font-size: 14px;
+    }
+
+    .bar {
+        margin-top: 4px;
+        width: 95%;
+    }
 }
 
 </style>
 """, unsafe_allow_html=True)
-
-
 # =====================================================
 # ЗАГРУЗКА ДАННЫХ
 # =====================================================
