@@ -327,7 +327,7 @@ if page == "LeaderBord":
         </div>
 
         <div class="title">
-            Leader<span class="title-red">Bord</span>
+            Leader<span class="title-red">Board</span>
         </div>
 
         <div class="red-line"></div>
