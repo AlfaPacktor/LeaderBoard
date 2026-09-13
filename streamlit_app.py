@@ -143,11 +143,25 @@ header {
 }
 
 
+/* Убираем отступы между блоками Streamlit */
+
+div[data-testid="stMarkdownContainer"] {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+div[data-testid="stVerticalBlock"] > div {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+
 /* Первое место */
 
 .row-first {
     border-left-color: #c49a00;
 }
+
 
 /* Второе место */
 
