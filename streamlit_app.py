@@ -2,6 +2,7 @@ import streamlit as st
 import json
 import os
 import time
+import html
 
 # =====================================================
 # НАСТРОЙКИ
@@ -387,49 +388,35 @@ if page == "🏆 LeaderBord":
             cup = '<div class="cup bronze">♛</div>'
 
 
-        st.markdown(
-            f"""
-            <div class="{row_class}">
+        row_html = f"""
+<div class="{row_class}">
+    <div class="rank-area">
+        {cup}
+        <div class="rank">
+            {place:02d}
+        </div>
+    </div>
 
-                <div class="rank-area">
+    <div>
+        <div class="name">
+            {employee["name"]}
+        </div>
 
-                    {cup}
-
-                    <div class="rank">
-                        {place:02d}
-                    </div>
-
-                </div>
-
-
-                <div>
-
-                    <div class="name">
-                        {employee["name"]}
-                    </div>
-
-                    <div class="bar">
-
-                        <div
-                            class="bar-inner"
-                            style="width:{width}%">
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="score">
-
-                    {rating:.1f}
-
-                </div>
-
+        <div class="bar">
+            <div
+                class="bar-inner"
+                style="width:{width}%">
             </div>
-            """,
-            unsafe_allow_html=True
-        )
+        </div>
+    </div>
+
+    <div class="score">
+        {rating:.1f}
+    </div>
+</div>
+"""
+
+        st.markdown(row_html, unsafe_allow_html=True)
 
 
     st.markdown(
