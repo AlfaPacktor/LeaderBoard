@@ -376,7 +376,7 @@ if page == "LeaderBord":
     </div>
 
     <div>
-        <div class="name">{employee["name"]}</div>
+        <div class="name">{html.escape(str(employee["name"]))}</div>
 
         <div class="bar">
             <div class="bar-inner" style="width:{width}%"></div>
@@ -387,10 +387,7 @@ if page == "LeaderBord":
 </div>
 """
 
-        st.markdown(
-            row_html,
-            unsafe_allow_html=True
-        )
+        st.html(row_html)
 
     st.markdown(
         """
