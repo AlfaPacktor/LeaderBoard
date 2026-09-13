@@ -29,10 +29,19 @@ st.markdown("""
 
 html, body, [class*="css"] {
     font-family: 'Montserrat', Arial, sans-serif;
+    color: #111111;
 }
 
 .stApp {
     background-color: #e9e9e9;
+    color: #111111;
+}
+
+.stMarkdown,
+.stMarkdown p,
+.stMarkdown div,
+.stMarkdown span {
+    color: #111111;
 }
 
 .block-container {
