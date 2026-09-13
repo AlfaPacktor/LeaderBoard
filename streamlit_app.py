@@ -296,18 +296,14 @@ def save_data(data):
 # SIDEBAR
 # =====================================================
 
-with st.sidebar:
-
-    st.markdown("### LeaderBoard")
-
-    page = st.radio(
-        "Раздел",
-        [
-            "🏆 LeaderBoard",
-            "⚙️ Администрирование"
-        ]
-    )
-
+page = st.radio(
+    "Раздел",
+    [
+        "LeaderBord",
+        "Администрирование"
+    ],
+    horizontal=True
+)
 
 # =====================================================
 # LEADERBOARD
