@@ -11,7 +11,7 @@ import html
 DATA_FILE = "data/employees.json"
 
 st.set_page_config(
-    page_title="LeaderBord",
+    page_title="LeaderBoard",
     page_icon="🏆",
     layout="centered",
     initial_sidebar_state="collapsed"
@@ -298,7 +298,7 @@ def save_data(data):
 
 with st.sidebar:
 
-    st.markdown("### LeaderBord")
+    st.markdown("### LeaderBoard")
 
     page = st.radio(
         "Раздел",
