@@ -126,7 +126,7 @@ header {
 
     min-height: 60px;
 
-    margin-bottom: 4px;
+    margin-bottom: 0px;
 
     padding: 6px 16px 6px 6px;
 
