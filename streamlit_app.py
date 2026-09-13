@@ -16,11 +16,11 @@ st.set_page_config(
 
     page_title="LeaderBord",
 
-    page_icon="🏆",
+    page_icon="🏆",
 
-    layout="centered",
+    layout="centered",
 
-    initial_sidebar_state="collapsed"
+    initial_sidebar_state="collapsed"
 
 )
 
