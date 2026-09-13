@@ -14,7 +14,7 @@ DATA_FILE = "data/employees.json"
 
 st.set_page_config(
 
-    page_title="LeaderBord",
+    page_title="LeaderBord",
 
     page_icon="🏆",
 
