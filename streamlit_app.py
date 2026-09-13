@@ -321,7 +321,7 @@ div[data-testid="stVerticalBlock"] > div {
         min-height: 52px;
 
         /* НИКАКИХ ОТСТУПОВ */
-        margin: 0;
+        margin: 0 !important;
 
         padding: 5px 10px 5px 4px;
     }
@@ -351,6 +351,22 @@ div[data-testid="stVerticalBlock"] > div {
         margin-bottom: 0;
     }
 }
+
+/* Убираем вертикальные промежутки между отдельными блоками */
+
+[data-testid="stVerticalBlock"] {
+    gap: 0 !important;
+}
+
+[data-testid="stHorizontalBlock"] {
+    gap: 0 !important;
+}
+
+[data-testid="stMarkdownContainer"] {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
 
 </style>
 """, unsafe_allow_html=True)
