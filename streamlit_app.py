@@ -349,20 +349,11 @@ if page == "🏆 LeaderBoard":
     for index, employee in enumerate(employees):
 
         place = index + 1
-
         rating = float(employee["rating"])
 
-        # Максимальная длина полосы
+        width = min(rating * 1.55, 100)
 
-        width = min(
-            rating * 1.55,
-            100
-        )
-
-
-        # Класс топ-3
-
-        row_class = "row"
+            row_class = "row"
 
         if place == 1:
             row_class += " row-first"
@@ -372,9 +363,6 @@ if page == "🏆 LeaderBoard":
 
         elif place == 3:
             row_class += " row-third"
-
-
-        # Кубок
 
         cup = ""
 
@@ -387,8 +375,7 @@ if page == "🏆 LeaderBoard":
         elif place == 3:
             cup = '<div class="cup bronze">♛</div>'
 
-
-       row_html = f"""
+        row_html = f"""
 <div class="{row_class}">
     <div class="rank-area">
         {cup}
@@ -397,6 +384,7 @@ if page == "🏆 LeaderBoard":
 
     <div>
         <div class="name">{employee["name"]}</div>
+
         <div class="bar">
             <div class="bar-inner" style="width:{width}%"></div>
         </div>
@@ -406,7 +394,7 @@ if page == "🏆 LeaderBoard":
 </div>
 """
 
-st.markdown(row_html, unsafe_allow_html=True)
+        st.markdown(row_html, unsafe_allow_html=True)
 
 
 
