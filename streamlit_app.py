@@ -22,10 +22,15 @@ st.set_page_config(
 # CSS
 # =====================================================
 
+# =====================================================
+# CSS
+# =====================================================
+
 st.markdown("""
 <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap');
+
 
 /* =====================================================
    ОСНОВНЫЕ НАСТРОЙКИ
@@ -40,8 +45,6 @@ html, body, [class*="css"] {
     background-color: #e9e9e9;
 }
 
-/* Убираем стандартное меню */
-
 #MainMenu {
     visibility: hidden;
 }
@@ -53,8 +56,6 @@ footer {
 header {
     visibility: hidden;
 }
-
-/* Основной контейнер */
 
 .block-container {
     max-width: 900px;
@@ -92,8 +93,6 @@ header {
     color: #111111;
 }
 
-/* Только Board красный */
-
 .title-red {
     color: #d71920 !important;
 }
@@ -126,8 +125,10 @@ header {
 
     min-height: 60px;
 
-    margin-bottom: 0px;
+    /* НИКАКИХ ОТСТУПОВ МЕЖДУ СТРОКАМИ */
+    margin: 0;
 
+    /* Внутренние отступы строки */
     padding: 6px 16px 6px 6px;
 
     background: #f7f7f7;
@@ -137,11 +138,12 @@ header {
     border-left: 5px solid transparent;
 
     transition: 0.2s;
+
+    box-sizing: border-box;
 }
 
 .row:hover {
     background: #ffffff;
-    transform: translateX(3px);
 }
 
 
@@ -206,13 +208,17 @@ header {
 
 
 /* =====================================================
-   ИМЯ УЧАСТНИКА
+   ИМЯ
    ===================================================== */
 
 .name {
     font-size: 16px;
     font-weight: 700;
     color: #111111;
+
+    /* Убираем возможные внешние отступы */
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -227,7 +233,8 @@ header {
 
     background: #d5d5d5;
 
-    margin-top: 6px;
+    margin-top: 5px;
+    margin-bottom: 0;
 }
 
 .bar-inner {
@@ -249,6 +256,9 @@ header {
     font-weight: 800;
 
     color: #111111;
+
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -300,17 +310,22 @@ header {
 
         min-height: 52px;
 
-        margin-bottom: 3px;
+        /* НИКАКИХ ОТСТУПОВ */
+        margin: 0;
 
         padding: 5px 10px 5px 4px;
     }
 
     .name {
         font-size: 12px;
+        margin: 0;
+        padding: 0;
     }
 
     .score {
         font-size: 19px;
+        margin: 0;
+        padding: 0;
     }
 
     .rank {
@@ -323,14 +338,16 @@ header {
 
     .bar {
         margin-top: 4px;
-        width: 95%;
+        margin-bottom: 0;
     }
 }
 
 </style>
 """, unsafe_allow_html=True)
+
+
 # =====================================================
-# ЗАГРУЗКА ДАННЫХ
+Загрузка данных
 # =====================================================
 
 def load_data():
