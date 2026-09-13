@@ -313,7 +313,7 @@ with st.sidebar:
 # LEADERBOARD
 # =====================================================
 
-if page == "🏆 LeaderBoard":
+if page == "LeaderBord":
 
     employees = load_data()
 
@@ -323,28 +323,25 @@ if page == "🏆 LeaderBoard":
         reverse=True
     )
 
+    st.markdown(
+        """
+        <div class="eyebrow">
+            <span class="live-dot"></span>
+            LIVE RANKING
+        </div>
 
-    # Заголовок
+        <div class="title">
+            Leader<span class="title-red">Bord</span>
+        </div>
 
-    st.markdown("""
-    <div class="eyebrow">
-        <span class="live-dot"></span>
-        LIVE RANKING
-    </div>
+        <div class="red-line"></div>
 
-    <div class="title">
-        Leader<span class="title-red">Bord</span>
-    </div>
-
-    <div class="red-line"></div>
-
-    <div class="subtitle">
-        Рейтинг участников конкурса
-    </div>
-    """, unsafe_allow_html=True)
-
-
-    # Таблица
+        <div class="subtitle">
+            Рейтинг участников конкурса
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
     for index, employee in enumerate(employees):
 
@@ -353,7 +350,7 @@ if page == "🏆 LeaderBoard":
 
         width = min(rating * 1.55, 100)
 
-            row_class = "row"
+        row_class = "row"
 
         if place == 1:
             row_class += " row-first"
@@ -394,32 +391,22 @@ if page == "🏆 LeaderBoard":
 </div>
 """
 
-        st.markdown(row_html, unsafe_allow_html=True)
-
-
+        st.markdown(
+            row_html,
+            unsafe_allow_html=True
+        )
 
     st.markdown(
         """
         <div class="footer">
-
-            <span>
-                АВТООБНОВЛЕНИЕ
-            </span>
-
-            <span>
-                LIVE
-            </span>
-
+            <span>АВТООБНОВЛЕНИЕ</span>
+            <span>LIVE</span>
         </div>
         """,
         unsafe_allow_html=True
     )
 
-
-    # Автообновление
-
-    time.sleep(3)
-
+    time.sleep(5)
     st.rerun()
 
 
