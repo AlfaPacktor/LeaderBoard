@@ -443,9 +443,6 @@ if page == "LeaderBord":
 
         <div class="red-line"></div>
 
-        <div class="subtitle">
-            Рейтинг участников конкурса
-        </div>
         """,
         unsafe_allow_html=True
     )
